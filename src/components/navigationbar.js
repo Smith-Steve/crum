@@ -14,8 +14,8 @@ export default function NavigationBar({ setComponent }) {
       <a className="active" href="#home">
         Home
       </a>
-      <a href="#login">Login</a>
-      <a href="#register">Register</a>
+      <a href="#register">Login/Register</a>
+      <a href="#null">Placeholder</a>
       <a href="#about">About</a>
     </div>
   );
