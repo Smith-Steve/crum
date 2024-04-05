@@ -11,7 +11,7 @@ export default function NavigationBar({ setComponent }) {
       setComponent(targetedComponent);
     } else {
       targetedComponent = event.target.href.replace(
-        "https://main.d2qowro5jlfsxv.amplifyapp.com/",
+        "https://main.d2qowro5jlfsxv.amplifyapp.com/#",
         ""
       );
       setComponent(targetedComponent);

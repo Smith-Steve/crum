@@ -17,7 +17,10 @@ import {
 class Register extends React.Component {
   constructor(props) {
     super(props);
-    this.state = null;
+    this.state = {
+      accessToken: null,
+      idToken: null,
+    };
   }
 
   handleSignout = () => {
@@ -28,13 +31,25 @@ class Register extends React.Component {
     currentAuthenticatedUser();
   };
 
-  checkAuthentication = () => {
-    const sessionInfo = getUserSessionInfo()
-      .then((response) => {
-        return response;
-      })
-      .catch((error) => console.error(error));
-    console.log(sessionInfo);
+  getAuthenticationDetails = () => {
+    getUserSessionInfo()
+      .then(this.onAuthenticationSuccess)
+      .catch(this.onAuthenticationFailure);
+  };
+
+  onAuthenticationSuccess = (response) => {
+    console.log(`Authentication Success: ${response}`);
+    this.setState((prevState) => {
+      return {
+        ...prevState,
+        accessToken: response.accessToken,
+        idToken: response.idToken,
+      };
+    });
+  };
+
+  onAuthenticationFailure = (errorMessage) => {
+    console.log(`Error Message: ${errorMessage}`);
   };
 
   render() {
@@ -46,7 +61,7 @@ class Register extends React.Component {
         </Card>
         <Button onClick={this.handleSignout}>Sign Out</Button>
         <Button onClick={this.userInfo}>Print User Info</Button>
-        <Button onClick={this.checkAuthentication}>Print User Info</Button>
+        <Button onClick={this.getAuthenticationDetails}>Print User Info</Button>
       </View>
     );
   }

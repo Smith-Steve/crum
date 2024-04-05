@@ -14,6 +14,9 @@ async function currentAuthenticatedUser() {
 async function getUserSessionInfo() {
   try {
     const { accessToken, idToken } = (await fetchAuthSession()).tokens ?? {};
+    console.log(
+      `Inside Function - Access Token ${accessToken} - idToken - ${idToken}`
+    );
     return { accessToken, idToken };
   } catch (error) {
     console.log(error);
