@@ -1,0 +1,44 @@
+{
+  "api": {
+    "apibe906b66": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "CustomerLambda"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "function": {
+    "CustomerLambda": {
+      "build": true,
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_CustomerLambda_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "CustomerLambda"
+        }
+      ]
+    },
+    "AMPLIFY_function_CustomerLambda_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "CustomerLambda"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-crum-dev-420fc-authRole",
+      "UnauthRoleArn": "arn:aws:iam::531698586584:role/amplify-crum-dev-420fc-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::531698586584:role/amplify-crum-dev-420fc-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-crum-dev-420fc-deployment",
+      "UnauthRoleName": "amplify-crum-dev-420fc-unauthRole",
+      "StackName": "amplify-crum-dev-420fc",
+      "StackId": "arn:aws:cloudformation:us-east-1:531698586584:stack/amplify-crum-dev-420fc/9d994bd0-f2f6-11ee-bdbe-0affd8b53175",
+      "AmplifyAppId": "d2qowro5jlfsxv"
+    },
+    "categories": {
+      "function": {
+        "CustomerLambda": {
+          "deploymentBucketName": "amplify-crum-dev-420fc-deployment",
+          "s3Key": "amplify-builds/CustomerLambda-7a4337493338706d5536-build.zip"
+        }
+      },
+      "api": {
+        "apibe906b66": {}
+      }
+    }
+  }
+}
