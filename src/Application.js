@@ -1,7 +1,9 @@
-import logo from "./logo.svg";
-import NavigationBar from "./components/navigationbar";
-import { get } from "aws-amplify/api";
 import React from "react";
+// Components
+import Home from "./components/home";
+import NavigationBar from "./components/navigationbar";
+import logo from "./logo.svg";
+import { get } from "aws-amplify/api";
 
 //Application component will be the component in which other component are rendered.
 
@@ -9,14 +11,28 @@ class Application extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      component: null,
+      component: "",
     };
   }
 
-  renderComponent() {}
+  renderComponent() {
+    const { component } = this.state.component;
+    switch (component) {
+      case "Customers":
+        console.log("Customer Component Rendering");
+        break;
+      default:
+        <Home />;
+    }
+  }
 
   render() {
-    return <NavigationBar />;
+    return (
+      <React.Fragment>
+        <NavigationBar />
+        {this.renderComponent()}
+      </React.Fragment>
+    );
   }
 }
 

@@ -2,13 +2,13 @@ import React from "react";
 
 export default function NavigationBar() {
   return (
-    <div className="top-navigator crum-color-secondary">
+    <div className="top-navigator">
       <a className="active" href="#home">
         Home
       </a>
-      <a href="#customers">Customers</a>
-      <a href="#item2">Item2</a>
-      <a href="#item3">Item3</a>
+      <a href="#news">News</a>
+      <a href="#contact">Contact</a>
+      <a href="#about">About</a>
     </div>
   );
 }

@@ -32,6 +32,7 @@ body {
 
 .top-navigator {
   overflow: hidden;
+  background-color: #333;
 }
 
 /* Top Nav Bar - End CSS layout */
