@@ -6,8 +6,8 @@ export default function NavigationBar() {
       <a className="active" href="#home">
         Home
       </a>
-      <a href="#news">News</a>
-      <a href="#contact">Contact</a>
+      <a href="#login">Login</a>
+      <a href="#services">Services</a>
       <a href="#about">About</a>
     </div>
   );

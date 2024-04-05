@@ -11,7 +11,7 @@ class Application extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      component: "",
+      component: "Customers",
     };
   }
 
@@ -22,7 +22,7 @@ class Application extends React.Component {
         console.log("Customer Component Rendering");
         break;
       default:
-        <Home />;
+        return <Home />;
     }
   }
 

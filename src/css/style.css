@@ -12,6 +12,20 @@
   background-color: #909cc2;
 }
 
+/* === TEXT CONTROL - Style ===*/
+
+/* Text */
+
+.large-text {
+  font-size: 2rem;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+/* === TEXT CONTROL - END ===*/
+
 /* Top Nav Bar (navbar.js) */
 
 .top-navigator a {

@@ -28,6 +28,22 @@ body {
   padding-top: 0.1rem;
 }
 
+/* Center Element In Parent */
+.center {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
+/* === TEXT CONTROL - Layout ===*/
+
+/* Center Text */
+.center-text {
+  text-align: center;
+}
+
+/* === TEXT CONTROL - END ===*/
+
 /* Top Nav Bar (navbar.js) */
 
 .top-navigator {
@@ -36,3 +52,10 @@ body {
 }
 
 /* Top Nav Bar - End CSS layout */
+
+/* Home Component */
+.home {
+  width: 50%;
+}
+
+/* Home Component - End CSS Layout */
