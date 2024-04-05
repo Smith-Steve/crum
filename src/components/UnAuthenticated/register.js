@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "../../logo.svg";
 import "@aws-amplify/ui-react/styles.css";
+import { signOut } from "aws-amplify/auth";
 import {
   withAuthenticator,
   Button,
@@ -13,9 +14,12 @@ import {
 class Register extends React.Component {
   constructor(props) {
     super(props);
-    this.signOut = this.signOut.bind();
     this.state = null;
   }
+
+  handleSignout = () => {
+    signOut();
+  };
 
   render() {
     return (
@@ -24,7 +28,7 @@ class Register extends React.Component {
           <Image src={logo} className="App-logo" alt="logo" />
           <Heading level={1}>We now have Auth!</Heading>
         </Card>
-        <Button onClick={this.signOut}>Sign Out</Button>
+        <Button onClick={this.handleSignout}>Sign Out</Button>
       </View>
     );
   }
