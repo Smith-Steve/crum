@@ -26,6 +26,9 @@
           "appId": "d2qowro5jlfsxv",
           "type": "cicd"
         }
+      },
+      "auth": {
+        "crumc63e7481": {}
       }
     }
   }
