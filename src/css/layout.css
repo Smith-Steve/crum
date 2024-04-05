@@ -1,0 +1,37 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.col {
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  flex-direction: flex;
+}
+
+.padding {
+  padding-left: 0.1rem;
+  padding-right: 0.1rem;
+  padding-bottom: 0.1rem;
+  padding-top: 0.1rem;
+}
+
+/* Top Nav Bar (navbar.js) */
+
+.top-navigator {
+  overflow: hidden;
+}
+
+/* Top Nav Bar - End CSS layout */
