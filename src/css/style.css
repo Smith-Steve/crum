@@ -5,7 +5,7 @@
 }
 
 .crum-color-secondary {
-  background-color: #084887;
+  background-color: #04aa6d;
 }
 
 .crum-color-third {
@@ -20,7 +20,8 @@
   font-size: 2rem;
 }
 
-.bold-text {
+.bold-text,
+label {
   font-weight: bold;
 }
 
@@ -51,7 +52,20 @@
 
 /* Center Text */
 form {
+  margin: 1rem;
   font-family: "Montserrat", sans-serif;
+  background-color: #bbb;
+  border-color: black;
+  border-style: solid;
+  padding: 1rem;
 }
 
 /* === Form Control - END ===*/
+
+/* === Buton - Style === */
+
+button {
+  border-radius: 0.25rem;
+}
+
+/* === Button Style - End === */

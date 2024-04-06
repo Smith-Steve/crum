@@ -10,6 +10,7 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   overflow: hidden;
+  min-height: 100vh;
 }
 
 .col {
@@ -28,11 +29,16 @@ body {
   padding-top: 0.1rem;
 }
 
+.align-right {
+  text-align: right;
+  float: right;
+}
+
 /* Center Element In Parent */
 .center {
   margin: auto;
-  width: 50%;
-  padding: 10px;
+  width: 60%;
+  padding: 2rem;
 }
 
 /* === TEXT CONTROL - Layout ===*/
@@ -61,15 +67,29 @@ body {
 /* Home Component - End CSS Layout */
 
 /* === Form Control - Layout ===*/
-
-/* Center Text */
 .input-row {
   display: flex;
   flex-direction: column;
 }
 
+.form-column {
+  float: left;
+  width: 50%;
+  padding: 1rem;
+}
+
+.form-title {
+  text-align: center;
+}
+/* Clear floats after columns*/
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 label {
-  margin: 0 1rem 1rem 0;
+  margin-bottom: 0.2rem;
   white-space: nowrap;
 }
 
