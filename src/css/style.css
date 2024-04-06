@@ -47,4 +47,11 @@
   color: white;
 }
 
-/* Top Nav Bar - End CSS Style */
+/* === Form Control - Style ===*/
+
+/* Center Text */
+form {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* === Form Control - END ===*/

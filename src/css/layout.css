@@ -59,3 +59,23 @@ body {
 }
 
 /* Home Component - End CSS Layout */
+
+/* === Form Control - Layout ===*/
+
+/* Center Text */
+.input-row {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin: 0 1rem 1rem 0;
+  white-space: nowrap;
+}
+
+form {
+  margin: 1rem;
+  padding: 0.8rem 0.8rem 1.5rem 0.8rem;
+}
+
+/* === Form Control - END ===*/

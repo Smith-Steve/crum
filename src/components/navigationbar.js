@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function NavigationBar({ setComponent }) {
+function NavigationBar({ setComponent }) {
   function getComponent(componentString) {
     return componentString.split("#")[1];
   }
@@ -16,8 +16,11 @@ export default function NavigationBar({ setComponent }) {
         Home
       </a>
       <a href="#register">Login/Register</a>
+      <a href="#customers">Customers</a>
       <a href="#contacts">Contacts</a>
-      <a href="#flights">flights</a>
+      <a href="#flights">Flights</a>
     </div>
   );
 }
+
+export { NavigationBar };

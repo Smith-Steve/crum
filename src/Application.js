@@ -3,7 +3,8 @@ import logo from "./logo.svg";
 // Components
 // UnAthenticated Components
 import Home from "./components/home";
-import NavigationBar from "./components/navigationbar";
+import { NavigationBar } from "./components/navigationbar";
+import Customers from "./components/Authenticated/Customers";
 import Register from "./components/UnAuthenticated/register";
 import ApplicationContext from "./library/application-context";
 
@@ -33,6 +34,8 @@ export default class Application extends React.Component {
     switch (this.state.component) {
       case "register":
         return <Register />;
+      case "customers":
+        return <Customers />;
       default:
         return <Home />;
     }
