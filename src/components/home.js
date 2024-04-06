@@ -1,4 +1,5 @@
 import React from "react";
+import ApplicationContext from "../library/application-context";
 
 export default function Home() {
   return (
@@ -7,8 +8,8 @@ export default function Home() {
         <div className="row">
           <div className="col">
             <p className="large-text bold-text">
-              HELP US MOVE THE CRM INDUSTRY AWAY FROM WHAT'S RIGHT FOR SASS
-              COMPANIES AND MOVE IT WHAT IS RIGHT FOR YOU!{" "}
+              WELECOME TO {}'s Website. HELP US MOVE THE CRM INDUSTRY AWAY FROM
+              WHAT'S RIGHT FOR SASS COMPANIES AND MOVE IT WHAT IS RIGHT FOR YOU!{" "}
             </p>
           </div>
         </div>

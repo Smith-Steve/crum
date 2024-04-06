@@ -1,21 +1,14 @@
 import React from "react";
 
 export default function NavigationBar({ setComponent }) {
+  function getComponent(componentString) {
+    return componentString.split("#")[1];
+  }
   const handleClick = (event) => {
     //will have to determine a way to make this dynamic. Right now the link is hard coded.
-    var targetedComponent = event.target.href.replace(
-      "http://localhost:3000/#",
-      ""
-    );
-    if (targetedComponent === "register") {
-      setComponent(targetedComponent);
-    } else {
-      targetedComponent = event.target.href.replace(
-        "https://main.d2qowro5jlfsxv.amplifyapp.com/#",
-        ""
-      );
-      setComponent(targetedComponent);
-    }
+    var selectedComponent = event.target.href;
+    var component = getComponent(selectedComponent);
+    setComponent(component);
   };
   return (
     <div className="top-navigator" onClick={handleClick}>
@@ -23,8 +16,8 @@ export default function NavigationBar({ setComponent }) {
         Home
       </a>
       <a href="#register">Login/Register</a>
-      <a href="#null">Placeholder</a>
-      <a href="#about">About</a>
+      <a href="#contacts">Contacts</a>
+      <a href="#flights">flights</a>
     </div>
   );
 }

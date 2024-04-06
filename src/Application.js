@@ -5,10 +5,11 @@ import logo from "./logo.svg";
 import Home from "./components/home";
 import NavigationBar from "./components/navigationbar";
 import Register from "./components/UnAuthenticated/register";
+import ApplicationContext from "./library/application-context";
 
 //Application component will be the component in which other component are rendered.
 
-class Application extends React.Component {
+export default class Application extends React.Component {
   constructor(props) {
     super(props);
     // this.signOut = this.signOut.bind(this);
@@ -47,12 +48,14 @@ class Application extends React.Component {
 
   render() {
     return (
-      <React.Fragment>
-        <NavigationBar setComponent={this.setComponent} />
-        {this.renderApplicationSplit()}
-      </React.Fragment>
+      <ApplicationContext.Provider companyName={"CRUM"}>
+        <React.Fragment>
+          <NavigationBar setComponent={this.setComponent} />
+          {this.renderApplicationSplit()}
+        </React.Fragment>
+      </ApplicationContext.Provider>
     );
   }
 }
 
-export default Application;
+Application.contextType = ApplicationContext;
