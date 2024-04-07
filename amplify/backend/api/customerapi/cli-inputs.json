@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "paths": {
+    "/customerapi": {
+      "name": "/customerapi",
+      "lambdaFunction": "CustomerLambda",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}

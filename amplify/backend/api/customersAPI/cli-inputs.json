@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "paths": {
+    "/customersAPI": {
+      "name": "/customersAPI",
+      "lambdaFunction": "customersApiLambda",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}

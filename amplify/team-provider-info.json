@@ -16,10 +16,26 @@
         "CustomerLambda": {
           "deploymentBucketName": "amplify-crum-dev-420fc-deployment",
           "s3Key": "amplify-builds/CustomerLambda-7a4337493338706d5536-build.zip"
+        },
+        "customersApiLambda": {
+          "deploymentBucketName": "amplify-crum-dev-420fc-deployment",
+          "s3Key": "amplify-builds/customersApiLambda-7857527377645a45586b-build.zip"
+        },
+        "CrumCustomersLambda": {
+          "deploymentBucketName": "amplify-crum-dev-420fc-deployment",
+          "s3Key": "amplify-builds/CrumCustomersLambda-38494f2b62476f4c704f-build.zip"
+        },
+        "CrumCompanyLambda": {
+          "deploymentBucketName": "amplify-crum-dev-420fc-deployment",
+          "s3Key": "amplify-builds/CrumCompanyLambda-6b663777747439423154-build.zip"
         }
       },
       "api": {
-        "apibe906b66": {}
+        "apibe906b66": {},
+        "customerapi": {},
+        "customersAPI": {},
+        "Customers": {},
+        "CrumCompany": {}
       },
       "hosting": {
         "amplifyhosting": {
@@ -29,6 +45,11 @@
       },
       "auth": {
         "crumc63e7481": {}
+      },
+      "storage": {
+        "crumCustomers": {},
+        "CrumCustomersDynamoDB": {},
+        "CrumCompanyDynamoDB": {}
       }
     }
   }

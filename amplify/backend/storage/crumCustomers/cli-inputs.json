@@ -1,0 +1,10 @@
+{
+  "resourceName": "crumCustomers",
+  "tableName": "crumCustomers",
+  "partitionKey": {
+    "fieldName": "customerId",
+    "fieldType": "number"
+  },
+  "gsi": [],
+  "triggerFunctions": []
+}

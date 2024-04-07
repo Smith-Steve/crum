@@ -1,5 +1,33 @@
 {
   "api": {
+    "CrumCompany": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "CrumCompanyLambda"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    },
+    "Customers": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "CrumCustomersLambda"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    },
     "apibe906b66": {
       "dependsOn": [
         {
@@ -9,6 +37,34 @@
           ],
           "category": "function",
           "resourceName": "CustomerLambda"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    },
+    "customerapi": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "CustomerLambda"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    },
+    "customersAPI": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "customersApiLambda"
         }
       ],
       "providerPlugin": "awscloudformation",
@@ -44,9 +100,66 @@
     }
   },
   "function": {
+    "CrumCompanyLambda": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributeEnvMap": {
+            "Arn": "TABLE_ARN",
+            "Name": "TABLE_NAME"
+          },
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "storage",
+          "resourceName": "CrumCompanyDynamoDB"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "CrumCustomersLambda": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributeEnvMap": {
+            "Arn": "TABLE_ARN",
+            "Name": "TABLE_NAME"
+          },
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "storage",
+          "resourceName": "CrumCustomersDynamoDB"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
     "CustomerLambda": {
       "build": true,
       "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "customersApiLambda": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributeEnvMap": {
+            "Arn": "TABLE_ARN",
+            "Name": "TABLE_NAME"
+          },
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "storage",
+          "resourceName": "crumCustomers"
+        }
+      ],
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
     }
@@ -59,6 +172,38 @@
     }
   },
   "parameters": {
+    "AMPLIFY_function_CrumCompanyLambda_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "CrumCompanyLambda"
+        }
+      ]
+    },
+    "AMPLIFY_function_CrumCompanyLambda_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "CrumCompanyLambda"
+        }
+      ]
+    },
+    "AMPLIFY_function_CrumCustomersLambda_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "CrumCustomersLambda"
+        }
+      ]
+    },
+    "AMPLIFY_function_CrumCustomersLambda_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "CrumCustomersLambda"
+        }
+      ]
+    },
     "AMPLIFY_function_CustomerLambda_deploymentBucketName": {
       "usedBy": [
         {
@@ -72,6 +217,22 @@
         {
           "category": "function",
           "resourceName": "CustomerLambda"
+        }
+      ]
+    },
+    "AMPLIFY_function_customersApiLambda_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "customersApiLambda"
+        }
+      ]
+    },
+    "AMPLIFY_function_customersApiLambda_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "customersApiLambda"
         }
       ]
     },
@@ -90,6 +251,20 @@
           "resourceName": "amplifyhosting"
         }
       ]
+    }
+  },
+  "storage": {
+    "CrumCompanyDynamoDB": {
+      "providerPlugin": "awscloudformation",
+      "service": "DynamoDB"
+    },
+    "CrumCustomersDynamoDB": {
+      "providerPlugin": "awscloudformation",
+      "service": "DynamoDB"
+    },
+    "crumCustomers": {
+      "providerPlugin": "awscloudformation",
+      "service": "DynamoDB"
     }
   }
 }

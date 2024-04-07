@@ -1,0 +1,10 @@
+{
+  "resourceName": "CrumCustomersDynamoDB",
+  "tableName": "CrumCustomersDynamoDB",
+  "partitionKey": {
+    "fieldName": "companyId",
+    "fieldType": "number"
+  },
+  "gsi": [],
+  "triggerFunctions": []
+}
