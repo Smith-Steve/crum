@@ -1,4 +1,6 @@
 import React from "react";
+import Customer from "../Library/data-classes/customers";
+import { postCustomer } from "../Library/api-calls/customer-api-calls";
 import { withAuthenticator } from "@aws-amplify/ui-react";
 
 class CreateCustomer extends React.Component {
@@ -16,6 +18,24 @@ class CreateCustomer extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
+    const {
+      companyName,
+      companyStreetName1,
+      companyCity,
+      companyZip,
+      companyStreetName2,
+      companyState,
+    } = this.state;
+    const newCustomer = new Customer(
+      companyName,
+      companyStreetName1,
+      companyCity,
+      companyZip,
+      companyStreetName2,
+      companyState
+    );
+
+    postCustomer(newCustomer);
   };
 
   clearForm = () => {
@@ -119,7 +139,10 @@ class CreateCustomer extends React.Component {
             </div>
           </div>
           <div className="align-right">
-            <button className="crum-color-secondary bold-text">
+            <button
+              className="crum-color-secondary bold-text"
+              onSubmit={this.handleSubmit}
+            >
               Enter Contact
             </button>
           </div>
