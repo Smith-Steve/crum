@@ -6,6 +6,7 @@ function NavigationBar({ setComponent }) {
   }
 
   const handleClick = (event) => {
+    console.log("EVENT: ", event.target.href);
     var selectedComponent = event.target.href;
     var component = getComponent(selectedComponent);
     setComponent(component);

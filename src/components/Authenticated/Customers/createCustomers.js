@@ -1,12 +1,12 @@
 import React from "react";
-import Customer from "../Library/data-classes/customers";
+import Customer from "../../Library/data-classes/customers";
 import {
   postCustomer,
   getAllCompanies,
-} from "../Library/api-calls/customer-api-calls";
+} from "../../Library/api-calls/customer-api-calls";
 import { withAuthenticator } from "@aws-amplify/ui-react";
 
-class CreateCustomer extends React.Component {
+class CreateCustomers extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -171,4 +171,4 @@ class CreateCustomer extends React.Component {
   }
 }
 
-export default withAuthenticator(CreateCustomer);
+export default withAuthenticator(CreateCustomers);

@@ -6,7 +6,9 @@ import Register from "./components/UnAuthenticated/register";
 import { NavigationBar } from "./components/navigationbar";
 // Authenticated Components
 // -  Company Components
-import CreateCustomer from "./components/Authenticated/createCustomer";
+// import CreateCustomer from "./components/Authenticated/createCustomer";
+// import CreateCustomers from "./components/Authenticated/Customers/createCustomers";
+import CreateCustomers from "./components/Authenticated/Customers/createCustomers";
 import ApplicationContext from "./library/application-context";
 
 //Application component will be the component in which other component are rendered.
@@ -36,7 +38,7 @@ export default class Application extends React.Component {
       case "register":
         return <Register />;
       case "addCustomer":
-        return <CreateCustomer />;
+        return <CreateCustomers />;
       default:
         return <Home />;
     }
