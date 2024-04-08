@@ -17,7 +17,7 @@ class SelectCompanyComponent extends React.Component {
             <div className="form-column">
               <div className="row">
                 <button className="crum-color-secondary bold-text">
-                  Button
+                  Create Customer
                 </button>
               </div>
               <div className="row">
