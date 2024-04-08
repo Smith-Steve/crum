@@ -11,7 +11,7 @@ function NavigationBar({ setComponent }) {
     setComponent(component);
   };
   return (
-    <div className="top-navigator" onClick={handleClick}>
+    <div className="top-navigator dropdown" onClick={handleClick}>
       <a className="active" href="#home">
         Home
       </a>
