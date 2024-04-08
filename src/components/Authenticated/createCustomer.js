@@ -87,7 +87,7 @@ class CreateCustomer extends React.Component {
   render() {
     return (
       <div className="container customers-component">
-        <form className="center" onSubmit={this.handleSubmit}>
+        <form className="center form-width" onSubmit={this.handleSubmit}>
           <div className="form-title bold-text large-text">Add Company</div>
           <div className="row">
             {/* First Column*/}

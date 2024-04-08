@@ -4,7 +4,9 @@ import logo from "./logo.svg";
 // UnAthenticated Components
 import Home from "./components/home";
 import { NavigationBar } from "./components/navigationbar";
+//Companies Components
 import CreateCustomer from "./components/Authenticated/createCustomer";
+import SelectCompanyComponent from "./components/Authenticated/Companies/selectCompanyComponent";
 import Register from "./components/UnAuthenticated/register";
 import ApplicationContext from "./library/application-context";
 
@@ -35,7 +37,7 @@ export default class Application extends React.Component {
       case "register":
         return <Register />;
       case "customers":
-        return <CreateCustomer />;
+        return <SelectCompanyComponent />;
       default:
         return <Home />;
     }

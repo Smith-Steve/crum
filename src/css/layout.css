@@ -37,8 +37,11 @@ body {
 /* Center Element In Parent */
 .center {
   margin: auto;
-  width: 60%;
   padding: 2rem;
+}
+
+.form-width {
+  width: 60%;
 }
 
 /* === TEXT CONTROL - Layout ===*/
