@@ -65,7 +65,7 @@ class CreateCustomers extends React.Component {
       companyStreetName2,
       companyState
     );
-    postCustomer(newCustomer);
+    postCustomer(newCustomer).then(this.clearForm);
   };
 
   clearForm = () => {

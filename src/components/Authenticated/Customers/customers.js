@@ -2,7 +2,10 @@
 import React from "react";
 import { withAuthenticator } from "@aws-amplify/ui-react";
 // Helpeer API Calls
-import { getAllCompanies } from "../../Library/api-calls/customer-api-calls";
+import {
+  getAllCompanies,
+  deleteOneCompany,
+} from "../../Library/api-calls/customer-api-calls";
 
 class CustomerList extends React.Component {
   constructor(props) {
@@ -34,7 +37,37 @@ class CustomerList extends React.Component {
     console.log(returnedError);
   };
 
-  renderCustomerTable = (customer) => {};
+  deleteCompany = (deletedCompany) => {
+    console.log(
+      "Console log. deleteCompany React Component passed in variable: ",
+      deletedCompany
+    );
+    deleteOneCompany(deletedCompany);
+    this.setState((prevState) => {
+      const indexOfCompany = prevState.customerList.findIndex(
+        (customer) => customer.companyId === deletedCompany.companyId
+      );
+      const newCompanyList = [...prevState.customerList];
+      if (indexOfCompany >= 0) newCompanyList.splice(indexOfCompany, 1);
+      return { customerList: newCompanyList };
+    });
+  };
+
+  renderCustomerTable = (customerRow) => {
+    console.log(customerRow);
+    return (
+      <tr>
+        <td>{customerRow.companyName}</td>
+        <td>{customerRow.companyState}</td>
+        <td>{customerRow.companyState}</td>
+        <td>
+          <button onClick={() => this.deleteCompany(customerRow)}>
+            Delete
+          </button>
+        </td>
+      </tr>
+    );
+  };
 
   render() {
     const customerList = this.state.customerList;
@@ -51,14 +84,11 @@ class CustomerList extends React.Component {
             <td>Customer State</td>
             <td>Action</td>
           </tr>
-          <tr>
-            <td>Stephen</td>
-            <td>Costa Mesa</td>
-            <td>California</td>
-            <td>
-              <button>Hello</button>
-            </td>
-          </tr>
+          {customerList.length > 0 ? (
+            customerList.map(this.renderCustomerTable)
+          ) : (
+            <div>No table</div>
+          )}
         </table>
       </div>
     );

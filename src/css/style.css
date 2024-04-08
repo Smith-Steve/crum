@@ -72,6 +72,10 @@ button {
 
 /* Tables - Style - Start*/
 
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
 /* Tables - Customer Table - Style  - Start*/
 
 td,

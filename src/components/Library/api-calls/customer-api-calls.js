@@ -1,4 +1,4 @@
-import { post, get } from "aws-amplify/api";
+import { post, get, del } from "aws-amplify/api";
 
 /*  API Resource Name: 'CrumCompany'
         path: /CrumCompany
@@ -47,4 +47,24 @@ async function getAllCompanies() {
   }
 }
 
-export { postCustomer, getAllCompanies };
+async function deleteOneCompany(company) {
+  console.log("Company variable passed into API call: ", company);
+  try {
+    const restOperation = del({
+      apiName: "CrumCompany",
+      path: `/CrumCompany/${company.companyId}`,
+    });
+    await restOperation.response;
+    console.log("Delete Achieved: ");
+    console.log(restOperation.response);
+  } catch (error) {
+    if (typeof company.companyId !== "number") {
+      console.log("Not a number data type.");
+      console.log(company.companyId);
+    } else {
+      console.log("Delete customer failed: ", error);
+    }
+  }
+}
+
+export { postCustomer, getAllCompanies, deleteOneCompany };
