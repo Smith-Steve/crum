@@ -10,13 +10,13 @@ class CreateCustomers extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      companyId: null,
-      companyName: null,
-      companyStreetName1: null,
-      companyCity: null,
-      companyZip: null,
-      companyStreetName2: null,
-      companyState: null,
+      companyId: "",
+      companyName: "",
+      companyStreetName1: "",
+      companyCity: "",
+      companyZip: "",
+      companyStreetName2: "",
+      companyState: "",
     };
     /*  API Resource Name: 'CrumCompany'
         path: /CrumCompany
@@ -87,7 +87,10 @@ class CreateCustomers extends React.Component {
   render() {
     return (
       <div className="container customers-component">
-        <form className="center form-width" onSubmit={this.handleSubmit}>
+        <form
+          className="perfect-center form-width"
+          onSubmit={this.handleSubmit}
+        >
           <div className="form-title bold-text large-text">Add Company</div>
           <div className="row">
             {/* First Column*/}

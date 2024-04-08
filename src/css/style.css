@@ -70,6 +70,27 @@ button {
 
 /* === Button Style - End === */
 
+/* Tables - Style - Start*/
+
+/* Tables - Customer Table - Style  - Start*/
+
+td,
+th {
+  border: 1px solid #dddd;
+  color: black;
+}
+
+.table-head {
+  background-color: #e9e9eb;
+  color: #666;
+}
+
+/* Tables - Customer Table - Style - End*/
+
+/* Tables - Contacts Table - Style - Start */
+
+/* Tables - Style - End */
+
 .text-decoration {
   text-decoration: none;
 }

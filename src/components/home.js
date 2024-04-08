@@ -4,7 +4,7 @@ import ApplicationContext from "../library/application-context";
 export default function Home() {
   return (
     <React.Fragment>
-      <div className="container home center center-text">
+      <div className="container home perfect-center center-text">
         <div className="row">
           <div className="col">
             <p className="large-text bold-text">
