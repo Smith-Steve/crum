@@ -1,13 +1,12 @@
 import React from "react";
-import logo from "./logo.svg";
 // Components
 // UnAthenticated Components
 import Home from "./components/home";
-import { NavigationBar } from "./components/navigationbar";
-//Companies Components
-import CreateCustomer from "./components/Authenticated/createCustomer";
-import SelectCompanyComponent from "./components/Authenticated/Companies/selectCompanyComponent";
 import Register from "./components/UnAuthenticated/register";
+import { NavigationBar } from "./components/navigationbar";
+// Authenticated Components
+// -  Company Components
+import CreateCustomer from "./components/Authenticated/createCustomer";
 import ApplicationContext from "./library/application-context";
 
 //Application component will be the component in which other component are rendered.
@@ -36,8 +35,8 @@ export default class Application extends React.Component {
     switch (this.state.component) {
       case "register":
         return <Register />;
-      case "customers":
-        return <SelectCompanyComponent />;
+      case "addCustomer":
+        return <CreateCustomer />;
       default:
         return <Home />;
     }

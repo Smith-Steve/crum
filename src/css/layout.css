@@ -111,10 +111,75 @@ button {
 
 /* === Buttons === End */
 
-/* === Dropdown Menu === Starr*/
+/* === Navigation Menu - Including Dropdown - Layout === Starr*/
 
-/* .dropdown {
-  position: relative;
-  display: inline-block;
-} */
 /* === Dropdown Menu === End*/
+
+/* Navigation Bar*/
+.navbar {
+  overflow: hidden;
+  background-color: #333; /* Style */
+  font-family: Arial; /* Style */
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px; /* Style */
+  color: white; /* Style */
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none; /* Style */
+}
+
+.dropdown {
+  float: left;
+  display: inline-block;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px; /* Style */
+  border: none; /* Style */
+  outline: none; /* Style */
+  color: white; /* Style */
+  padding: 14px 16px;
+  background-color: inherit; /* Style */
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  /* margin: 0; Important for vertical align on mobile phones */
+}
+
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+  background-color: red; /* Style */
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333; /* Style */
+  min-width: 160px; /* Style */
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); /* Style */
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black; /* Style */
+  padding: 12px 16px;
+  text-decoration: none; /* Style */
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd; /* Style */
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+/* === Navigation Menu - Including Dropdown - Layout === */
