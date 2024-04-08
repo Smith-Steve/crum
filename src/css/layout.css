@@ -102,3 +102,9 @@ form {
 }
 
 /* === Form Control - END ===*/
+
+/* === BUttons === Start*/
+button {
+  padding: 0.1rem;
+  margin: 0.1rem;
+}

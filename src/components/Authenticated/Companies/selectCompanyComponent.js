@@ -17,17 +17,21 @@ class SelectCompanyComponent extends React.Component {
             <div className="form-column">
               <div className="row">
                 <button className="crum-color-secondary bold-text">
-                  Create Customer
+                  <a href="#createCustomer" className="text-decoration">
+                    CreateCustomer
+                  </a>
                 </button>
               </div>
               <div className="row">
                 <button className="crum-color-secondary bold-text">
-                  Button
+                  <a href="#customerList" className="text-decoration">
+                    CustomerList
+                  </a>
                 </button>
               </div>
               <div className="row">
                 <button className="crum-color-secondary bold-text">
-                  Button
+                  <a href="#customerUnknownComponent">CustomerList2</a>
                 </button>
               </div>
             </div>
