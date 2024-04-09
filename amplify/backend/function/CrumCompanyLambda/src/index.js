@@ -17,5 +17,6 @@ exports.handler = (event, context) => {
     context,
     "PROMISE"
   ).promise;
+  console.log(event.pathParameters.customerId);
   return returnValue;
 };
